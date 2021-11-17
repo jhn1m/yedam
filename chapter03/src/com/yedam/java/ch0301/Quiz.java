@@ -1,4 +1,4 @@
-package com.yedam.java.ch0301;
+package src.com.yedam.java.ch0301;
 
 public class Quiz {
 
@@ -79,9 +79,8 @@ public class Quiz {
 			System.out.println("One of a or b is negative number");
 		}
 		
-		//((m > 0) && (n > 0))?System.out.println("both a and b are zero or more"):System.out.println("One of a or b is negative number");
-		
-		
+//		String strResult = ((m > 0) && (n > 0))?"both a and b are zero or more"):"One of a or b is negative number";
+//		System.out.println(strResult);
 		
 	}
 
