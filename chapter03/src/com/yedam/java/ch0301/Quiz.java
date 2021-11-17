@@ -81,7 +81,7 @@ public class Quiz {
 		
 		//((m > 0) && (n > 0))?System.out.println("both a and b are zero or more"):System.out.println("One of a or b is negative number");
 		
-		
+		 
 		
 	}
 
