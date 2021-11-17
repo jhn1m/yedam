@@ -1,6 +1,4 @@
-package com.yedam.java.ch0301;
-
-import java.util.Iterator;
+package src.com.yedam.java.ch0301;
 
 public class OperatorExample {
 
