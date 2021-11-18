@@ -81,11 +81,11 @@ public class Quiz {
 						max = scores[i];
 					}
 				}
-				
-				for(int i =0; i < scores.length; i++) {
+
+				for (int i = 0; i < scores.length; i++) {
 					sum += scores[i];
 				}
-				
+
 				avg = sum / scores.length;
 				System.out.println("최고 점수 : " + max);
 				System.out.println("평균 점수 : " + avg);
