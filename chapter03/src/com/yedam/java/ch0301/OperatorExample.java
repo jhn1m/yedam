@@ -1,4 +1,4 @@
-package src.com.yedam.java.ch0301;
+package com.yedam.java.ch0301;
 
 public class OperatorExample {
 

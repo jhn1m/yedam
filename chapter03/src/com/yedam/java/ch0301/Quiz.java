@@ -1,4 +1,4 @@
-package src.com.yedam.java.ch0301;
+package com.yedam.java.ch0301;
 
 public class Quiz {
 
@@ -63,31 +63,25 @@ public class Quiz {
 		val /= 10;
 
 		// 문제5
-		// 변수 val의 값이 양수일 경우엔 변수 값을 
+		// 변수 val의 값이 양수일 경우엔 변수 값을
 		// 아닐 경우엔 0을 담는 변수를 선언하라.
 		// (삼항 연산자를 사용)
 		val = (val > 0) ? val : 0;
 		System.out.println(val);
-		
+
 		// 문제 5)
 		// 다음과 같이 두 개의 정수가 주어졌을 경우 두 정수 중에서
 		// 음수가 있다면 'One of a or b is negative number'를,
 		// 만일 그렇지 않다면 'both a and b are zero or more'를 출력하도록 구현하세요.
-		if((m > 0) && (n > 0 )) {
+		if ((m > 0) && (n > 0)) {
 			System.out.println("both a and b are zero or more");
-		}else {
+		} else {
 			System.out.println("One of a or b is negative number");
 		}
-		
-<<<<<<< HEAD
-		//((m > 0) && (n > 0))?System.out.println("both a and b are zero or more"):System.out.println("One of a or b is negative number");
-		
-		 
-=======
+	}
+}
+
+// ((m > 0) && (n > 0))?System.out.println("both a and b are zero or
+// more"):System.out.println("One of a or b is negative number");
 //		String strResult = ((m > 0) && (n > 0))?"both a and b are zero or more"):"One of a or b is negative number";
 //		System.out.println(strResult);
->>>>>>> branch 'main' of https://github.com/jhn1m/yedam.git
-		
-	}
-
-}
