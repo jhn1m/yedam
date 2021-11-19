@@ -7,9 +7,9 @@ public class Quiz {
 	public static void main(String[] args) {
 		Quiz6();
 	}
+
 	// 4. for문을 이용해서 주어진 배열의 항목에서 최대값을
 	// 구해보세요.
-
 	private static void Quiz4() {
 
 		int[] array = { 1, 5, 3, 8, 2 };
@@ -94,5 +94,6 @@ public class Quiz {
 				run = false;
 			}
 		}
+		sc.close();
 	}
 }
