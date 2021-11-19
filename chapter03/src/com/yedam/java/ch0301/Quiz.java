@@ -1,5 +1,6 @@
 package com.yedam.java.ch0301;
 
+
 public class Quiz {
 
 	public static void main(String[] args) {
