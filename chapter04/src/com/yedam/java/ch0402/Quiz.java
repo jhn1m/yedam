@@ -4,7 +4,12 @@ import java.util.Scanner;
 
 public class Quiz {
 	public static void main(String[] args) {
+		Quiz2();
+		Quiz3();
+		Quiz4();
+		Quiz5();
 		Quiz6();
+		Quiz7();
 	}
 
 	// 2. for문을 이용해서 1부터 100까지의 정수 중에서 3의 배수의

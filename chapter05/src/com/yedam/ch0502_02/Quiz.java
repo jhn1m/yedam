@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class Quiz {
 
 	public static void main(String[] args) {
+		Quiz4();
+		Quiz5();
 		Quiz6();
 	}
 

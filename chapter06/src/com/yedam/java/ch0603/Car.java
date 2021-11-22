@@ -19,12 +19,15 @@ public class Car {
 	}
 
 	Car(String model) {
-		this.model = model;
+		this(model, "은색", 250); // 반드시 첫 줄에 작성
+//		this.model = model;
+
 	}
 
 	Car(String model, String color) {
-		this.model = model;
-		this.color = color;
+		this(model, color, 250); 
+//		this.model = model;
+//		this.color = color;
 	}
 
 	Car(String model, String color, int maxSpeed) {
