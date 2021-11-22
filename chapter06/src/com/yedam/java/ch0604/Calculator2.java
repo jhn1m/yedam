@@ -14,25 +14,30 @@ public class Calculator2 {
 		minus(x, y);
 		multiply(x, y);
 		division(x, y);
+
 	}
 
 	int plus(int x, int y) {
 		int result = x + y;
+		System.out.println(x + " + " + y + " =  " + result);
 		return result;
 	}
 
 	int minus(int x, int y) {
 		int result = x - y;
+		System.out.println(x + " - " + y + " =  " + result);
 		return result;
 	}
 
 	int multiply(int x, int y) {
 		int result = x * y;
+		System.out.println(x + " X " + y + " =  " + result);
 		return result;
 	}
 
 	int division(int x, int y) {
 		int result = x / y;
+		System.out.println(x + " / " + y + " =  " + result);
 		return result;
 	}
 }

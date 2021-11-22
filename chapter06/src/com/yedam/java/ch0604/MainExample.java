@@ -61,11 +61,11 @@ public class MainExample {
 		System.out.println("정사각형 넓이 : " + dbResult1);
 		System.out.println("직사각형 넓이 : " + dbResult2);
 
-		Person per = new Person();
-		System.out.println("이 사람의 나이는 : " + per.age);
-		System.out.println("이 사람의 이름은 : " + per.name);
-		System.out.println("이 사람의 결혼여부 : " + per.mariage);
-		System.out.println("이 사람의 자식 수는 " + per.childrenCnt + "명 입니다.");
+		Person person = new Person();
+		System.out.println("이 사람의 나이는 : " + person.age);
+		System.out.println("이 사람의 이름은 : " + person.name);
+		System.out.println("이 사람의 결혼여부 : " + person.mariage);
+		System.out.println("이 사람의 자식 수는 " + person.childrenCnt + "명 입니다.");
 
 		ShoppingMall order1 = new ShoppingMall(201803120001L, "abc123", "2018년 3월 12일", "홍길순", "PD0345-12",
 				"서울시 영등포구 여의도동 20번지");
@@ -76,8 +76,9 @@ public class MainExample {
 		System.out.println("주문자 이름 : " + order1.name);
 		System.out.println("주문 상품 번호 : " + order1.itemNum);
 		System.out.println("배송 주소 : " + order1.address);
-		
+
 		Calculator2 calc = new Calculator2();
 		calc.calcAll(3, 4);
+		calc.division(6, 3);
 	}
 }
