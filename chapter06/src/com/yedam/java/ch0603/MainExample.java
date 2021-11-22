@@ -18,6 +18,13 @@ public class MainExample {
 		System.out.println("k2.nation : " + k2.nation);
 
 		// 인스턴스 생성 시 생성자를 선택
-		
+		Car car1 = new Car();
+		System.out.println("car1.company :  " + car1.company + "\n");
+		System.out.println("car1.model :  " + car1.model + "\n");
+
+		Car car2 = new Car("자가용");
+		System.out.println("car2.company : " + car2.company);
+		System.out.println("car2.model : " + car2.model + "\n");
+
 	}
 }
