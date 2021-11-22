@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Test {
 
 	public static void main(String[] args) {
-
+		Quiz5();
 	}
 
 	private static void my() {
