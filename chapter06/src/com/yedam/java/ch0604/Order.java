@@ -1,6 +1,6 @@
 package com.yedam.java.ch0604;
 
-public class ShoppingMall {
+public class Order {
 	// 문제2) 쇼핑몰에 주문이 들어왔습니다. 주문 내용은 다음과 같습니다.
 	// <<주문 내용>>
 	// 주문 번호 : 201803120001
@@ -21,11 +21,8 @@ public class ShoppingMall {
 	String address;
 
 	// 생성자
-	ShoppingMall() {
 
-	}
-
-	ShoppingMall(long shoppingNum, String id, String shoppingDate, String name, String itemNum, String address) {
+	Order(long shoppingNum, String id, String shoppingDate, String name, String itemNum, String address) {
 		this.shoppingNum = shoppingNum;
 		this.id = id;
 		this.shoppingDate = shoppingDate;

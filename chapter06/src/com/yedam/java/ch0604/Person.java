@@ -8,13 +8,17 @@ public class Person {
 	// 이 사람의 이름
 	// 이 사람의 결혼 여부
 	// 이 사람의 자녀 수
+
 	// 필드
 	int age = 40;
 	String name = "James";
 	boolean mariage = true;
 	int childrenCnt = 3;
-	
+
 	// 생성자
 
 	// 메서드
+
+	 
+
 }
