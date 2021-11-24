@@ -6,25 +6,19 @@ public class Printer {
 	double doubler;
 	String stringer;
 
-	void println(int integer) {
-		this.integer = integer;
-		System.out.println(integer);
+	void println(int value) {
+		System.out.println(value);
 	}
 
-	void println(boolean booleaner) {
-		this.booleaner = booleaner;
-		System.out.println(booleaner);
+	void println(boolean value) {
+		System.out.println(value);
 	}
 
-	void println(double doubler) {
-		this.doubler = doubler;
-		System.out.println(doubler);
+	void println(double value) {
+		System.out.println(value);
 	}
 
-	void println(String stringer) {
-		this.stringer = stringer;
-		System.out.println(stringer);
+	void println(String value) {
+		System.out.println(value);
 	}
-
-	
 }
