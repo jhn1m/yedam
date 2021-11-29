@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="11_22_review/src"/>
+	<classpathentry kind="src" path="11_24_quiz/src"/>
+	<classpathentry kind="src" path="11_25_tes/src"/>
+	<classpathentry kind="src" path="chapter02/src"/>
+	<classpathentry kind="src" path="chapter03"/>
+	<classpathentry kind="src" path="chapter04/src"/>
+	<classpathentry kind="src" path="chapter05/src"/>
+	<classpathentry kind="src" path="chapter06/src"/>
+	<classpathentry kind="src" path="chapter06_AccessModifier/src"/>
+	<classpathentry kind="src" path="chapter06_Example/src"/>
+	<classpathentry kind="src" path="chapter06_Review/src"/>
+	<classpathentry kind="src" path="chapter07/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11"/>
+	<classpathentry kind="src" path="helloworld/src"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
