@@ -39,7 +39,7 @@ public class Book {
 		return bookName;
 	}
 
-	public void setBookWriter(String bookAuthor) {
+	public void setBookAuthor(String bookAuthor) {
 		this.bookAuthor = bookAuthor;
 	}
 
@@ -61,6 +61,11 @@ public class Book {
 
 	public boolean isRental() {
 		return rental;
+	}
+
+	public void bookAdd(String bookName, String bookAuthor) {
+		setBookName(this.bookName);
+		setBookAuthor(this.bookAuthor);
 	}
 
 	void BookTake(String bookName) {
@@ -85,5 +90,4 @@ public class Book {
 			BookTake(BookName);
 		}
 	}
-
 }

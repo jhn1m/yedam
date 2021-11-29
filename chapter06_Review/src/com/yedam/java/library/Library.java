@@ -16,6 +16,10 @@ public class Library {
 
 	// 3. 책에 대한 입고처리
 
+	public void BookAdd(String bookName) {
+	
+	}
+	
 	// 1. 현재 보유중인 책 정보 확인
 	public void printBookList() {
 		for (int i = 0; i < this.bookCount - 1; i++) {
