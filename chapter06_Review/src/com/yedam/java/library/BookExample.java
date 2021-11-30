@@ -1,5 +1,6 @@
 /*
-	 중앙로 도서관에서 근무 중인 김씨의 오늘 업무일지는 다음과 같습니다.
+	 중앙로 도서관에서 근무 중인 김씨의 오늘 업무일지는 다음과 같습니다. 
+
 	 - 당일 들어온 책에 대해 입고처리
 	 (참고1, 책마다 고유번호가 자동으로 부여됩니다. )
 	 (참고2, 도서관에서 보유할 수 있는 책의 최대 수량은 5권입니다.)
@@ -26,7 +27,6 @@ package com.yedam.java.library;
 
 public class BookExample extends Library {
 	public static void main(String[] args) {
-
 		Library library = new Library();
 		library.printBookList();
 
