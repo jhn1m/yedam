@@ -11,12 +11,12 @@ public class Book {
 
 	// 생성자
 
-	public Book() {
+	public Book(String name, String author) {
 
 		Book.serialNum++;
 		this.bookNum = Book.serialNum;
-		this.bookName = bookName;
-		this.bookAuthor = bookAuthor;
+		this.bookName = name;
+		this.bookAuthor = author;
 		this.rentalCnt = 0;
 		this.rental = false;
 	}
@@ -63,15 +63,12 @@ public class Book {
 		return rental;
 	}
 
-	public void bookAdd(String bookName, String bookAuthor) {
-		setBookName(this.bookName);
-		setBookAuthor(this.bookAuthor);
-	}
-
-	void BookTake(String bookName) {
-		System.out.println(bookName + "책을 빌렸습니다.");
-		rentalCnt++;
-		rental = true;
+	void BookTake(String name) {
+		System.out.println(name + "책을 빌렸습니다.");
+//		rentalCnt++;
+//		rental = true;
+		rentalCntUp();
+		setRental(true);
 	}
 
 	@Override
@@ -83,11 +80,11 @@ public class Book {
 
 	}
 
-	void isBookTake(String BookName) {
+	void isBookTake(String name) {
 		if (this.rental == true) {
 			System.out.println("현재 대여중인 책입니다.");
 		} else {
-			BookTake(BookName);
+			BookTake(name);
 		}
 	}
 }
