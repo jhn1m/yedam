@@ -1,0 +1,15 @@
+package com.yedam.java.ch01_02;
+
+public class Button {
+	OnClickListener listener;
+
+	void setOnClickListener(OnClickListener listener) {
+		this.listener = listener;
+	}
+
+	static interface OnClickListener {
+		void onClick();
+		void touch();
+	}
+
+}
