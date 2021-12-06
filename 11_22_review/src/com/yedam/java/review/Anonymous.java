@@ -9,7 +9,7 @@ public class Anonymous {
 	};
 
 	void method1() {
-		Worker localVar;
+		Worker localVar = null;
 		localVar.start();
 	}
 
