@@ -17,6 +17,6 @@ public class Rectangle {
 	}
 
 	public double getCircleCumference() {
-		return x * y;
+		return (x * 2) + (y * 2);
 	}
 }
