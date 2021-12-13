@@ -15,12 +15,12 @@ public class B {
 	// 정적 멤버
 
 	// 정적 필드
-	static X field3 = new X();
+//	static X field3 = new X();
 	static Y field4 = new Y();
 
 	// 정적 메소드
 	static void method2() {
-		X var1 = new X();
+//		X var1 = new X();
 		Y var2 = new Y();
 	}
 

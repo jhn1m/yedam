@@ -1,6 +1,6 @@
 package com.yedam.java.ch02_01;
 
-import com.yedam.java.ch02_01.Button.OnClickListener;
+import com.yedam.java.ch02_01.Button.*;
 
 public class Window {
 	Button button1 = new Button();
@@ -26,27 +26,27 @@ public class Window {
 
 		}
 	};
-	
-	Window(){
+
+	Window() {
 		button1.setOnClickListener(listener);
 		button2.setOnClickListener(new Button.OnClickListener() {
-			
+
 			@Override
 			public void touch() {
 				// TODO Auto-generated method stub
-				
+
 			}
-			
+
 			@Override
 			public void setOnClickListener(OnClickListener listener) {
 				// TODO Auto-generated method stub
-				
+
 			}
-			
+
 			@Override
 			public void onCLick() {
 				// TODO Auto-generated method stub
-				
+
 			}
 		});
 	}
