@@ -1,4 +1,4 @@
-package check02;
+package com.yedam.java.check02;
 
 public class Anonymous {
 	void method1() {

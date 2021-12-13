@@ -1,4 +1,4 @@
-package check03;
+package com.yedam.java.check03;
 
 public class CheckBoxExample {
 	public static void main(String[] args) {
