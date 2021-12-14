@@ -1,4 +1,4 @@
-package com.yedam.java.ch02_01;
+package com.yedam.java.ch02_04;
 
 public interface Calculatable {
 	public int sum();
