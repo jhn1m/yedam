@@ -25,7 +25,7 @@ public class SQLQuiz {
 		pstmt.setInt(4, 9999);
 		pstmt.setDouble(5, 0.5);
 		pstmt.setInt(6, 80);
-		
+
 		// SQL문 실행
 		int result = pstmt.executeUpdate();
 
@@ -80,9 +80,9 @@ public class SQLQuiz {
 			stmt.close();
 
 		if (pstmt != null)
-			conn.close();
+			pstmt.close();
 
 		if (conn != null)
-			pstmt.close();
+			conn.close();
 	}
 }
