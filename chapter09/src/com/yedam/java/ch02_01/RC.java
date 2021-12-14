@@ -15,6 +15,7 @@ public class RC {
 		}
 	};
 
+	
 	// 로컬 변수값으로 대입
 	void method1() {
 		RemoteControl localVar = new RemoteControl() {
@@ -31,7 +32,7 @@ public class RC {
 
 			}
 		};
-		
+
 		System.out.println();
 
 		RC rc = new RC();
@@ -40,8 +41,12 @@ public class RC {
 		// 익명객체 로컬변수 사용
 		rc.method1();
 		// 익명객체 매개변수 사용
+		
+		
+		
 		rc.method2(new RemoteControl() {
-
+			
+			
 			@Override
 			public void turnOn() {
 				System.out.println("SmartTV를 켭니다.");
