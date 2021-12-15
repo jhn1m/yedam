@@ -1,8 +1,10 @@
 package com.yedam.app;
 
+import java.util.List;
 import java.util.Scanner;
 
 import com.yedam.app.emp.Emp;
+import com.yedam.app.emp.EmpDAOImpl;
 
 public class EmpFrame {
 	// 필드
@@ -14,7 +16,7 @@ public class EmpFrame {
 			menuPrint();
 
 			// 메뉴 선택
-			int menuNum = menuSelect();
+			int menuNo = menuSelect();
 			if (menuNo == 1) {
 				insertEmp();
 			} else if (menuNo == 2) {
@@ -52,9 +54,64 @@ public class EmpFrame {
 	void insertEmp() {
 		// 값을 입력받아야 함
 		Emp emp = inputAll();
-		
+
 		// INSERT
-		EmpDAOImpl
+		EmpDAOImpl.getInstance().insert(emp);
+	}
+
+	void updateEmp() {
+		Emp emp = inputAll();
+		EmpDAOImpl.getInstance().update(emp);
+	}
+
+	void deleteEmp() {
+		int employeeId = inputEmpId();
+		EmpDAOImpl.getInstance().delete(employeeId);
+	}
+
+	void selectOne() {
+		int employeeId = inputEmpId();
+		Emp emp = EmpDAOImpl.getInstance().selectOne(employeeId);
+		System.out.println(emp);
+	}
+
+	void selectAll() {
+		List<Emp> list = EmpDAOImpl.getInstance().selectAll();
+		for (Emp emp : list) {
+			System.out.println(emp);
+		}
+	}
+
+	void end() {
+		System.out.println("프로그램을 종료합니다.");
+	}
+
+	Emp inputAll() {
+		Emp emp = new Emp();
+		emp = new Emp();
+		System.out.print("사원번호 >> ");
+		emp.setEmployeeId(sc.nextInt());
+		System.out.print("이름 >> ");
+		emp.setLastName(sc.next());
+		System.out.println("성 >> ");
+		
+		System.out.print("부서명 >> ");
+		emp.setJobId(sc.next());
+		System.out.print("연봉 >> ");
+		emp.setSalary(sc.nextDouble());
+		System.out.print("상여율 >> ");
+		emp.setCommissionPct(sc.nextDouble());
+		System.out.print("부서아이디 >> ");
+		emp.setDepartmentId(sc.nextInt());
+
+		return emp;
+	}
+
+	int inputEmpId() {
+		int employeeId = 0;
+		System.out.print("사원번호 >> ");
+		employeeId = sc.nextInt();
+		return employeeId;
 	}
 
 }

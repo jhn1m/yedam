@@ -1,65 +1,116 @@
 package com.yedam.java.app03;
 
+import java.sql.Date;
+
 public class Emp {
-	private int employeeId;
-	private String lastName;
-	private String jobId;
-	private double salary;
-	private double commissionPct;
-	private int departmentId;
+	// 필드
+		private int employeeId;
+		private String firstName;
+		private String lastName;
+		private String email;
+		private String phoneNumber;
+		private Date hireDate;
+		private String jobId;
+		private double salary;
+		private double commissionPct;
+		private int managerId;
+		private int departmentId;
 
-	public int getEmployeeId() {
-		return employeeId;
-	}
+		// 메서드 - getter , setter
+		public int getEmployeeId() {
+			return employeeId;
+		}
 
-	public void setEmployeeId(int employeeId) {
-		this.employeeId = employeeId;
-	}
+		public void setEmployeeId(int employeeId) {
+			this.employeeId = employeeId;
+		}
 
-	public String getLastName() {
-		return lastName;
-	}
+		public String getFirstName() {
+			return firstName;
+		}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+		public void setFirstName(String firstName) {
+			this.firstName = firstName;
+		}
 
-	public String getJobId() {
-		return jobId;
-	}
+		public String getLastName() {
+			return lastName;
+		}
 
-	public void setJobId(String jobId) {
-		this.jobId = jobId;
-	}
+		public void setLastName(String lastName) {
+			this.lastName = lastName;
+		}
 
-	public double getSalary() {
-		return salary;
-	}
+		public String getEmail() {
+			return email;
+		}
 
-	public void setSalary(double salary) {
-		this.salary = salary;
-	}
+		public void setEmail(String email) {
+			this.email = email;
+		}
 
-	public double getCommissionPct() {
-		return commissionPct;
-	}
+		public String getPhoneNumber() {
+			return phoneNumber;
+		}
 
-	public void setCommissionPct(double commissionPct) {
-		this.commissionPct = commissionPct;
-	}
+		public void setPhoneNumber(String phoneNumber) {
+			this.phoneNumber = phoneNumber;
+		}
 
-	public int getDepartmentId() {
-		return departmentId;
-	}
+		public Date getHireDate() {
+			return hireDate;
+		}
 
-	public void setDepartmentId(int departmentId) {
-		this.departmentId = departmentId;
-	}
+		public void setHireDate(Date hireDate) {
+			this.hireDate = hireDate;
+		}
 
-	@Override
-	public String toString() {
-		return "Emp [employeeId=" + employeeId + ", lastName=" + lastName + ", jobId=" + jobId + ", salary=" + salary
-				+ ", commissionPct=" + commissionPct + ", departmentId=" + departmentId + "]";
-	}
+		public String getJobId() {
+			return jobId;
+		}
+
+		public void setJobId(String jobId) {
+			this.jobId = jobId;
+		}
+
+		public double getSalary() {
+			return salary;
+		}
+
+		public void setSalary(double salary) {
+			this.salary = salary;
+		}
+
+		public double getCommissionPct() {
+			return commissionPct;
+		}
+
+		public void setCommissionPct(double commissionPct) {
+			this.commissionPct = commissionPct;
+		}
+
+		public int getManagerId() {
+			return managerId;
+		}
+
+		public void setManagerId(int managerId) {
+			this.managerId = managerId;
+		}
+
+		public int getDepartmentId() {
+			return departmentId;
+		}
+
+		public void setDepartmentId(int departmentId) {
+			this.departmentId = departmentId;
+		}
+
+		@Override
+		public String toString() {
+			return "Employee [employeeId=" + employeeId + ", firstName=" + firstName + ", lastName=" + lastName + ", email="
+					+ email + ", phoneNumber=" + phoneNumber + ", hireDate=" + hireDate + ", jobId=" + jobId + ", salary="
+					+ salary + ", commissionPct=" + commissionPct + ", managerId=" + managerId + ", departmentId="
+					+ departmentId + "]";
+		}
 
 }

@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.yedam.app.common.DAO;
-import com.yedam.java.app03.EmpDAO;
 
 public class EmpDAOImpl extends DAO implements EmpDAO {
 
@@ -36,10 +35,15 @@ public class EmpDAOImpl extends DAO implements EmpDAO {
 			while (rs.next()) {
 				Emp emp = new Emp();
 				emp.setEmployeeId(rs.getInt("employee_id"));
+				emp.setFirstName(rs.getString("first_name"));
 				emp.setLastName(rs.getString("last_name"));
+				emp.setEmail(rs.getString("email"));
+				emp.setPhoneNumber(rs.getString("phone_number"));
+				emp.setHire_date(rs.getDate("hire_date"));
 				emp.setJobId(rs.getString("job_id"));
 				emp.setSalary(rs.getDouble("salary"));
 				emp.setCommissionPct(rs.getDouble("commission_pct"));
+				emp.setManagerId(rs.getInt("manager_id"));
 				emp.setDepartmentId(rs.getInt("department_id"));
 				list.add(emp);
 			}
@@ -65,10 +69,15 @@ public class EmpDAOImpl extends DAO implements EmpDAO {
 			rs = stmt.executeQuery(select);
 			while (rs.next()) {
 				emp.setEmployeeId(rs.getInt("employee_id"));
+				emp.setFirstName(rs.getString("first_name"));
 				emp.setLastName(rs.getString("last_name"));
+				emp.setEmail(rs.getString("email"));
+				emp.setPhoneNumber(rs.getString("phone_number"));
+				emp.setHire_date(rs.getDate("hire_date"));
 				emp.setJobId(rs.getString("job_id"));
 				emp.setSalary(rs.getDouble("salary"));
 				emp.setCommissionPct(rs.getDouble("commission_pct"));
+				emp.setManagerId(rs.getInt("manager_id"));
 				emp.setDepartmentId(rs.getInt("department_id"));
 			}
 		} catch (SQLException e) {
@@ -88,12 +97,23 @@ public class EmpDAOImpl extends DAO implements EmpDAO {
 			String insert = "INSERT INTO emp13 VALUES(?, ?, ?, ?, ?, ?)";
 
 			pstmt = conn.prepareStatement(insert);
-			pstmt.setInt(1, emp.getEmployeeId());
-			pstmt.setString(2, emp.getLastName());
-			pstmt.setString(3, emp.getJobId());
-			pstmt.setDouble(4, emp.getSalary());
-			pstmt.setDouble(5, emp.getCommissionPct());
-			pstmt.setInt(6, emp.getDepartmentId());
+//			pstmt.setInt(1, emp.getEmployeeId());
+//			pstmt.setString(2, emp.getLastName());
+//			pstmt.setString(3, emp.getJobId());
+//			pstmt.setDouble(4, emp.getSalary());
+//			pstmt.setDouble(5, emp.getCommissionPct());
+//			pstmt.setInt(6, emp.getDepartmentId());
+			pstmt.setInt(1, "employee_id");
+			pstmt.setString(2, first_name"));
+			pstmt.setString(3, "last_name"));
+			pstmt.setString(4, email"));
+			pstmt.setPhoneNumber(5, phone_number"));
+			pstmt.setHire_date(6, ("hire_date"));
+			pstmt.setString(7,("job_id"));
+			pstmt.setInt(8, ("salary"));
+			pstmt.setInt(9, ("commission_pct"));
+			pstmt.setInt(10, ("manager_id"));
+			pstmt.setInt(11, ("department_id"));
 
 			int result = pstmt.executeUpdate();
 
