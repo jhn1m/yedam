@@ -3,8 +3,8 @@ package com.yedam.java.app02;
 public class Dept {
 	private int departmentId;
 	private String departmentName;
-	private int managerId;
-	private int locationId;
+	private String lastName;
+	private String city;
 
 	public int getDepartmentId() {
 		return departmentId;
@@ -22,26 +22,26 @@ public class Dept {
 		this.departmentName = departmentName;
 	}
 
-	public int getManagerId() {
-		return managerId;
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setManagerId(int managerId) {
-		this.managerId = managerId;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
-	public int getLocationId() {
-		return locationId;
+	public String getCity() {
+		return city;
 	}
 
-	public void setLocationId(int locationId) {
-		this.locationId = locationId;
+	public void setCity(String city) {
+		this.city = city;
 	}
 
 	@Override
 	public String toString() {
-		return "Dept [departmentId=" + departmentId + ", departmentName=" + departmentName + ", managerId=" + managerId
-				+ ", locationId=" + locationId + "]";
+		return "Dept [departmentId=" + departmentId + ", departmentName=" + departmentName + ", lastName=" + lastName
+				+ ", city=" + city + "]";
 	}
 
 }
