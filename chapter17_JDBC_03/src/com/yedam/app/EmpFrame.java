@@ -72,7 +72,11 @@ public class EmpFrame {
 	void selectOne() {
 		int employeeId = inputEmpId();
 		Emp emp = EmpDAOImpl.getInstance().selectOne(employeeId);
-		System.out.println(emp);
+		if (emp == null) {
+			System.out.println(employeeId + " : 없는 부서입니다.");
+		} else {
+			System.out.println(emp);
+		}
 	}
 
 	void selectAll() {
@@ -94,7 +98,7 @@ public class EmpFrame {
 		System.out.print("이름 >> ");
 		emp.setLastName(sc.next());
 		System.out.println("성 >> ");
-		
+
 		System.out.print("부서명 >> ");
 		emp.setJobId(sc.next());
 		System.out.print("연봉 >> ");
