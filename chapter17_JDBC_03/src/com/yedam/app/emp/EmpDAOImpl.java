@@ -94,7 +94,7 @@ public class EmpDAOImpl extends DAO implements EmpDAO {
 			connect();
 
 			// SQL
-			String insert = "INSERT INTO emp13 VALUES(?, ?, ?, ?, ?, ?)";
+			String insert = "INSERT INTO employees VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 			pstmt = conn.prepareStatement(insert);
 //			pstmt.setInt(1, emp.getEmployeeId());
@@ -103,17 +103,17 @@ public class EmpDAOImpl extends DAO implements EmpDAO {
 //			pstmt.setDouble(4, emp.getSalary());
 //			pstmt.setDouble(5, emp.getCommissionPct());
 //			pstmt.setInt(6, emp.getDepartmentId());
-			pstmt.setInt(1, "employee_id");
-			pstmt.setString(2, first_name"));
-			pstmt.setString(3, "last_name"));
-			pstmt.setString(4, email"));
-			pstmt.setPhoneNumber(5, phone_number"));
-			pstmt.setHire_date(6, ("hire_date"));
-			pstmt.setString(7,("job_id"));
-			pstmt.setInt(8, ("salary"));
-			pstmt.setInt(9, ("commission_pct"));
-			pstmt.setInt(10, ("manager_id"));
-			pstmt.setInt(11, ("department_id"));
+			pstmt.setInt(1, emp.getEmployeeId());
+			pstmt.setString(2, emp.getFirstName());
+			pstmt.setString(3, emp.getLastName());
+			pstmt.setString(4, emp.getEmail());
+			pstmt.setString(5, emp.getPhoneNumber());
+			pstmt.setDate(6, emp.getHire_date());
+			pstmt.setString(7, emp.getJobId());
+			pstmt.setDouble(8, emp.getSalary());
+			pstmt.setDouble(9, emp.getCommissionPct());
+			pstmt.setInt(10, emp.getManagerId());
+			pstmt.setInt(11, emp.getDepartmentId());
 
 			int result = pstmt.executeUpdate();
 
@@ -132,7 +132,7 @@ public class EmpDAOImpl extends DAO implements EmpDAO {
 			connect();
 
 			// SQL
-			String update = "UPDATE emp13 SET salary = ? WHERE employee_id = ?";
+			String update = "UPDATE employees SET salary = ? WHERE employee_id = ?";
 			pstmt = conn.prepareStatement(update);
 
 			pstmt.setDouble(1, emp.getSalary());
