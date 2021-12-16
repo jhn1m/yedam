@@ -38,7 +38,7 @@ public class Emp13Frame {
 		System.out.println("---------------------------------------------------------------------");
 		System.out.println("| 1. 등록 | 2. 수정 | 3. 삭제 | 4. 사원조회 | 5. 전체조회 | 9. 종료 |");
 		System.out.println("---------------------------------------------------------------------");
-		System.out.print("선택 >>");
+		System.out.print("선택 >> ");
 	}
 
 	int menuSelect() {
