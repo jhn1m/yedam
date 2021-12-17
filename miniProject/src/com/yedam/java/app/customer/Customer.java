@@ -29,7 +29,10 @@ public class Customer {
 	public void setShopId(int shopId) {
 		this.shopId = shopId;
 	}
-	
-	
+	@Override
+	public String toString() {
+		return "Customer [customerId=" + customerId + ", customerName=" + customerName + ", customerPwd=" + customerPwd
+				+ ", shopId=" + shopId + "]";
+	}
 	
 }

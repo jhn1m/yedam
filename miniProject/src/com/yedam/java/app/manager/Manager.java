@@ -4,6 +4,7 @@ public class Manager {
 	private int managerId;
 	private String managerName;
 	private String managerPwd;
+	private int shopId;
 
 	public int getManagerId() {
 		return managerId;
@@ -27,6 +28,20 @@ public class Manager {
 
 	public void setManagerPwd(String managegPwd) {
 		this.managerPwd = managegPwd;
+	}
+
+	public int getShopId() {
+		return shopId;
+	}
+
+	public void setShopId(int shopId) {
+		this.shopId = shopId;
+	}
+
+	@Override
+	public String toString() {
+		return "Manager [managerId=" + managerId + ", managerName=" + managerName + ", managerPwd=" + managerPwd
+				+ ", shopId = " + shopId + "]";
 	}
 
 }

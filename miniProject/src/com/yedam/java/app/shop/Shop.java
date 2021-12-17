@@ -29,4 +29,9 @@ public class Shop {
 		this.shopLocation = shopLocation;
 	}
 
+	@Override
+	public String toString() {
+		return "Shop [shopId=" + shopId + ", shopName=" + shopName + ", shopLocation=" + shopLocation + "]";
+	}
+
 }

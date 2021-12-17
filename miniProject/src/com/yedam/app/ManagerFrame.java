@@ -8,48 +8,43 @@ import com.yedam.java.app.manager.ManagerDAOImpl;
 
 public class ManagerFrame {
 	Scanner sc = new Scanner(System.in);
-
+	ManagerDAOImpl manimp = ManagerDAOImpl.getInstance();
+	
 	public ManagerFrame() {
 		while (true) {
-			// 메뉴 출력
-			menuPrint();
-
-			// 메뉴 선택
+			manimp.login();
 			int menuNo = menuSelect();
 			if (menuNo == 1) {
-				insertManager();
+				loginCheck();
 			} else if (menuNo == 2) {
-				updateManager();
-			} else if (menuNo == 3) {
-				deleteManager();
-			} else if (menuNo == 4) {
-				selectOne();
-			} else if (menuNo == 5) {
-				selectAll();
+				insertManager();
 			} else if (menuNo == 9) {
-				end();
 				break;
 			}
 		}
 
+			// 메뉴 출력
+//			menuPrint();
+
+			// 메뉴 선택
+//			int menuNo = menuSelect();
+//			if (menuNo == 1) {
+//				insertManager();
+//			} else if (menuNo == 2) {
+//				updateManager();
+//			} else if (menuNo == 3) {
+//				deleteManager();
+//			} else if (menuNo == 4) {
+//				selectOne();
+//			} else if (menuNo == 5) {
+//				selectAll();
+//			} else if (menuNo == 9) {
+//				end();
+//				break;
+//			}
+
 	}
 
-	void menuPrint() {
-		System.out.println("---------------------------------------------------------------------");
-		System.out.println("| 1. 등록 | 2. 수정 | 3. 삭제 | 4. 개별조회 | 5. 전체조회 | 9. 종료 |");
-		System.out.println("---------------------------------------------------------------------");
-		System.out.print("선택 >> ");
-	}
-
-	void updateMenuPrint() {
-		System.out.println("----------------------------------------------");
-		System.out.println("수정을 선택하셨습니다. 수정 메뉴를 선택하세요.");
-		System.out.println("----------------------------------------------\n");
-		System.out.println("-------------------------------------------------------------");
-		System.out.println("| 1. 전체수정 | 2. 이름만 수정 | 3. 비밀번호 수정 | 9. 취소 |");
-		System.out.println("-------------------------------------------------------------");
-		System.out.print("선택 >> ");
-	}
 
 	int menuSelect() {
 		int menuNo = 0;
@@ -61,6 +56,11 @@ public class ManagerFrame {
 		return menuNo;
 	}
 
+	void loginCheck() {
+		Manager manager = inputForLogin();
+		ManagerDAOImpl.getInstance().loginCheck(manager);
+	}
+
 	void insertManager() {
 		// 값을 입력받아야 함
 		Manager manager = inputAll();
@@ -70,7 +70,7 @@ public class ManagerFrame {
 	}
 
 	void updateManager() {
-		updateMenuPrint();
+//		updateMenuPrint();
 		int menuNo = menuSelect();
 		if (menuNo == 1) {
 			updateAllManager();
@@ -114,12 +114,7 @@ public class ManagerFrame {
 		}
 	}
 
-	void selectAll() {
-		List<Manager> list = ManagerDAOImpl.getInstance().selectAll();
-		for (Manager manager : list) {
-			System.out.println(manager);
-		}
-	}
+
 
 	void end() {
 		System.out.println("프로그램을 종료합니다.");
@@ -143,6 +138,17 @@ public class ManagerFrame {
 		manager.setManagerPwd(sc.next());
 
 		return manager;
+	}
+
+	Manager inputForLogin() {
+		Manager manager = new Manager();
+		manager = new Manager();
+		System.out.print("매니저 아이디 >> ");
+		manager.setManagerId(sc.nextInt());
+		System.out.print("매니저 비밀번호 >> ");
+		manager.setManagerPwd(sc.next());
+		return manager;
+
 	}
 
 	Manager inputForName() {
