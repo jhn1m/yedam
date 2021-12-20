@@ -1,6 +1,5 @@
 package com.yedam.app;
 
-import java.util.List;
 import java.util.Scanner;
 
 import com.yedam.java.app.manager.Manager;
