@@ -6,6 +6,7 @@ public class Todo {
     private int todoId;
     private String todoContents;
     private Date todoDeadline;
+    private int playerId;
 
     public String getTodoContents() {
         return todoContents;
@@ -30,4 +31,18 @@ public class Todo {
     public void setTodoId(int todoId) {
         this.todoId = todoId;
     }
+
+    public int getPlayerId() {
+        return playerId;
+    }
+
+    public void setPlayerId(int playerId) {
+        this.playerId = playerId;
+    }
+
+    @Override
+    public String toString() {
+        return "리스트번호 = " + todoId + ", 내용 = " + todoContents + ", 마감일 = " + todoDeadline + ", 작성자 = " + playerId;
+    }
+
 }

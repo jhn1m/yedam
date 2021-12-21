@@ -23,17 +23,19 @@ public class Main {
 	}
 
 	private static void menuPrint() {
-		System.out.println("---------------------------------------------");
-		System.out.println("| 1. 매니저 | 2. 회원 | 3. 재선택 | 9. 종료 |");
-		System.out.println("---------------------------------------------");
+		System.out.println("-------------------------------------------------------------");
+		System.out.println("| 1. 매니저 | 2. 회원 | 3. TodoList | 4. 재선택  | 9. 종료 |");
+		System.out.println("-------------------------------------------------------------");
 		System.out.print("선택 >> ");
 		int menuNo = menuSelect();
 
 		if (menuNo == 1) {
 			new ManagerFrame();
 		} else if (menuNo == 2) {
-//			new ShopFrame();
+			new PlayerFrame();
 		} else if (menuNo == 3) {
+			new TodoFrame();
+		} else if (menuNo == 4) {
 			menuPrint();
 		} else if (menuNo == 9) {
 			return;

@@ -12,6 +12,8 @@ public interface ManagerDAO {
 
 	void updateMenuPrint();
 
+	void updatePlayerMenuPrint();
+
 	int menuSelect();
 
 	void end();
@@ -28,6 +30,10 @@ public interface ManagerDAO {
 
 	void insertManager();
 
+	void insert(Player player);
+
+	void insertPlayer();
+
 	Manager inputAll();
 
 	Manager inputForLogin();
@@ -40,6 +46,22 @@ public interface ManagerDAO {
 
 	int inputManagerId();
 
+	Player inputAllForPlayer();
+
+	Player inputForPlayerLogin();
+
+	Player inputForPlayerName();
+
+	Player inputForPlayerPwd();
+
+	Player inputForPlayerPhone();
+
+	Player inputForPlayerProgress();
+
+	Player inputForPlayerRank();
+
+	int inputPlayerId();
+
 	// 수정
 
 	void updateManager();
@@ -49,7 +71,6 @@ public interface ManagerDAO {
 	void updateNameManager();
 
 	void updatePwdManager();
-
 
 	void updatePhoneManager();
 
@@ -61,16 +82,55 @@ public interface ManagerDAO {
 
 	void updatePhone(Manager manager);
 
+	void updatePlayer();
+
+	void updateAllPlayer();
+
+	void updateNamePlayer();
+
+	void updatePwdPlayer();
+
+	void updatePhonePlayer();
+
+	void updateProgressPlayer();
+
+	void updateRankPlayer();
+
+	void updateAll(Player player);
+
+	void updatePwd(Player player);
+
+	void updateName(Player player);
+
+	void updatePhone(Player player);
+
+	void updateProgress(Player player);
+
+	void updateRank(Player player);
+
+	void pwdCheck();
+
+	Manager pwdCheck(Manager loginInfo);
+
 	// 삭제
 	void delete(int managerId);
 
 	void deleteManager();
 
+	void deletePlayer(int playerId);
+
+	void deletePlayerManager();
+
 	// 조회
 	List<Manager> selectAll();
+
+	List<Player> selectPlayerAll();
+
+	Player selectPlayerOne(int playerId);
 
 	Manager selectOne(int managerId);
 
 	void selectOne();
 
+	void selectPlayerOne();
 }
